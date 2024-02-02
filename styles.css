@@ -66,7 +66,8 @@ input{
     font-family: 'Belleza', sans-serif;
     color: #A1A892;
     background-color: #2B331B;
-    width: 20%;
+    width: 25%;
+    padding: 2%;
     font-weight: unset;
     height: 250px;
     border-radius: 13%;
