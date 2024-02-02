@@ -49,8 +49,11 @@ function displayBook(container, book) {
     container.appendChild(bookDiv);
 
     function adjustDivHeight() {
+        let green = document.getElementsByClassName("green")[0];
         var contentHeight = bookDiv.clientHeight;
-        container.style.height = contentHeight + 'px';
+        let outsideHeight = left.clientHeight;
+        container.style.height = contentHeight + "px";
+        green.style.height = (outsideHeight) + "vh";
     }
     
     adjustDivHeight();
