@@ -1,5 +1,5 @@
 let myLibrary = [];
-let left = document.getElementsByClassName("left")[0];
+let left = document.getElementsByClassName("outside")[0];
 
 document.getElementById("addBook").addEventListener("click", () => {
     let title = document.getElementById("name").value;
