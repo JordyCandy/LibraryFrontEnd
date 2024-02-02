@@ -20,6 +20,15 @@ body{
     align-items: center;
 }
 
+.deleteBtn{
+    color:#2B331B;
+    background-color: #A1A892;
+    border: solid 1px #A1A892;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+}
+
 #addBook{
     display: block;
     position: relative;

@@ -37,9 +37,14 @@ function displayBook(container, book) {
     let readStatusParagraph = document.createElement("p");
     readStatusParagraph.textContent = "Read: " + book.readOrNot;
 
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("deleteBtn");
+
     bookDiv.appendChild(titleHeader);
     bookDiv.appendChild(authorHeader);
     bookDiv.appendChild(readStatusParagraph);
+    bookDiv.appendChild(deleteBtn);
 
     container.appendChild(bookDiv);
 
@@ -50,4 +55,12 @@ function displayBook(container, book) {
     
     adjustDivHeight();
     window.addEventListener('resize', adjustDivHeight);
+
+    deleteBtn.addEventListener("click", () =>{
+        container.removeChild(bookDiv);
+    });
+}
+
+function deleter(){
+    
 }
