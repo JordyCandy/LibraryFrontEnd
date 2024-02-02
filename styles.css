@@ -88,3 +88,42 @@ h1{
     height: 100vh;
 }
 
+@media (max-width: 768px){
+    .myVals{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .green{
+        display: none;
+    }
+
+
+    .left{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 30%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .bookImg{
+        display: none;
+    }
+
+    #addBook{
+        width: 40%;
+        margin: 5%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
