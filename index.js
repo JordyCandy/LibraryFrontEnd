@@ -9,10 +9,8 @@ document.getElementById("addBook").addEventListener("click", () => {
     var newBook = addBookToLibrary(title, author, readOrNot);
     myLibrary.push(newBook);
 
-    // Display the newly added book without clearing existing content
     displayBook(left, newBook);
 
-    console.log(newBook);
 });
 
 function Book(title, author, readOrNot) {
@@ -26,11 +24,10 @@ function addBookToLibrary(title, author, readOrNot) {
 }
 
 function displayBook(container, book) {
-    // Create a div element
+
     let bookDiv = document.createElement("div");
     bookDiv.classList.add("bookDIV");
 
-    // Create h1, h3, and p elements
     let titleHeader = document.createElement("h1");
     titleHeader.textContent = "Title: " + book.title;
 
@@ -40,11 +37,17 @@ function displayBook(container, book) {
     let readStatusParagraph = document.createElement("p");
     readStatusParagraph.textContent = "Read: " + book.readOrNot;
 
-    // Append h1, h3, and p to the div
     bookDiv.appendChild(titleHeader);
     bookDiv.appendChild(authorHeader);
     bookDiv.appendChild(readStatusParagraph);
 
-    // Append the div to the specified container
     container.appendChild(bookDiv);
+
+    function adjustDivHeight() {
+        var contentHeight = bookDiv.clientHeight;
+        container.style.height = contentHeight + 'px';
+    }
+    
+    adjustDivHeight();
+    window.addEventListener('resize', adjustDivHeight);
 }

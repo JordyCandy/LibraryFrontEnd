@@ -14,18 +14,20 @@ body{
 }
 
 .myVals{
-    width: 100%;
+    width: 60%;
     height: 15%;
+    display: flex;
+    align-items: center;
 }
 
-.btn{
+#addBook{
     display: block;
     position: relative;
-    left: 36%;
-    top: 25%;
+    z-index: 2;
+    left: 5%;
     width: 17%;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 2px 10px;
     border: none;
     background-color: #6d7956;
     color: #2B331B;
